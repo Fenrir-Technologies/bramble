@@ -175,7 +175,7 @@ func newTraceProvider(exp sdktrace.SpanExporter, res *resource.Resource) (*sdktr
 		// Otherwise we follow the rules from above.
 		sdktrace.WithSampler(sdktrace.AlwaysSample()),
 		sdktrace.WithResource(res),
-		sdktrace.WithSpanProcessor(sdktrace.NewBatchSpanProcessor(exp)),
+		sdktrace.WithBatcher(exp),
 	)
 
 	return traceProvider, nil
