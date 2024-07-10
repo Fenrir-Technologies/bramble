@@ -186,7 +186,10 @@ func (c *GraphQLClient) Request(ctx context.Context, url string, request *Reques
 		Data: out,
 	}
 
-	if err = json.NewDecoder(&limitReader).Decode(&graphqlResponse); err != nil {
+	err = json.NewDecoder(&limitReader).Decode(&graphqlResponse)
+	withResponseHeaders(res.Header, out)
+
+	if err != nil {
 		if errors.Is(err, io.ErrUnexpectedEOF) {
 			if limitReader.N == 0 {
 				return traceErr(fmt.Errorf("response exceeded maximum size of %d bytes", maxResponseSize))
@@ -200,6 +203,14 @@ func (c *GraphQLClient) Request(ctx context.Context, url string, request *Reques
 	}
 
 	return nil
+}
+
+func withResponseHeaders(headers http.Header, out interface{}) {
+	if outPtr, isPtr := out.(*interface{}); isPtr {
+		if response, isMap := (*outPtr).(*map[string]interface{}); isMap && (*response) != nil {
+			(*response)["headers"] = headers
+		}
+	}
 }
 
 // Request is a GraphQL request.

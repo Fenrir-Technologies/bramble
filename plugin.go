@@ -28,6 +28,7 @@ type Plugin interface {
 	GraphqlQueryPath() (bool, string)
 	ApplyMiddlewarePublicMux(http.Handler) http.Handler
 	ApplyMiddlewarePrivateMux(http.Handler) http.Handler
+	ResponseHeaders(headers http.Header)
 	WrapGraphQLClientTransport(http.RoundTripper) http.RoundTripper
 
 	InterceptRequest(ctx context.Context, operationName, rawQuery string, variables map[string]interface{})
@@ -79,6 +80,8 @@ func (p *BasePlugin) ApplyMiddlewarePublicMux(h http.Handler) http.Handler {
 func (p *BasePlugin) ApplyMiddlewarePrivateMux(h http.Handler) http.Handler {
 	return h
 }
+
+func (p *BasePlugin) ResponseHeaders(headers http.Header) {}
 
 // WrapGraphQLClientTransport wraps the http.RoundTripper used for GraphQL requests.
 func (p *BasePlugin) WrapGraphQLClientTransport(transport http.RoundTripper) http.RoundTripper {

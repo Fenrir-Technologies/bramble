@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"net/http"
 	"sync"
 	"time"
 
@@ -259,8 +260,21 @@ func (s *ExecutableSchema) ExecuteQuery(ctx context.Context) *graphql.Response {
 		})
 	}
 
+	var headers http.Header
+
 	for _, result := range results {
+		if resultMap, ok := result.Data.(map[string]interface{}); ok {
+			rawHeaders := resultMap["headers"]
+
+			if currentHeaders, hasHeaders := rawHeaders.(http.Header); hasHeaders {
+				headers = currentHeaders
+			}
+		}
 		errs = append(errs, result.Errors...)
+	}
+
+	for _, plugin := range s.plugins {
+		plugin.ResponseHeaders(headers)
 	}
 
 	if !operationCtx.DisableIntrospection {
