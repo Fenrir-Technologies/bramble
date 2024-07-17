@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/fenrir-technologies/bramble"
+	"github.com/movio/bramble"
 	"github.com/stretchr/testify/assert"
 )
 

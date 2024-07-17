@@ -1,6 +1,6 @@
 module github.com/fenrir-technologies/bramble
 
-go 1.22.5
+go 1.22
 
 require (
 	github.com/99designs/gqlgen v0.17.41
@@ -50,6 +50,8 @@ require (
 	go.opentelemetry.io/otel/sdk/metric v1.27.0
 	go.opentelemetry.io/otel/trace v1.27.0
 )
+
+require github.com/movio/bramble v1.4.15
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
