@@ -18,7 +18,7 @@ import (
 
 // instrumentationName is used to identify the instrumentation in the
 // OpenTelemetry collector. It maps to the attribute `otel.library.name`.
-const instrumentationName string = "github.com/movio/bramble"
+const instrumentationName string = "github.com/Fenrir-Technologies/bramble"
 
 // TelemetryConfig is the configuration for OpenTelemetry tracing and metrics.
 type TelemetryConfig struct {

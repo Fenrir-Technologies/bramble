@@ -1,4 +1,4 @@
-module github.com/movio/bramble
+module github.com/Fenrir-Technologies/bramble
 
 go 1.22
 

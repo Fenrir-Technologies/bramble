@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Fenrir-Technologies/bramble"
 	"github.com/gofrs/uuid"
-	"github.com/movio/bramble"
 	"github.com/stretchr/testify/assert"
 )
 
