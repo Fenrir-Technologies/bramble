@@ -1,6 +1,6 @@
 module github.com/fenrir-technologies/bramble
 
-go 1.22
+go 1.22.5
 
 require (
 	github.com/99designs/gqlgen v0.17.41
