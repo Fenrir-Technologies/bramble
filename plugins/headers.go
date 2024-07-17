@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/Fenrir-Technologies/bramble"
+	"github.com/fenrir-technologies/bramble"
 )
 
 func init() {

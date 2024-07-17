@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Fenrir-Technologies/bramble"
+	"github.com/fenrir-technologies/bramble"
 	"github.com/gofrs/uuid"
 )
 

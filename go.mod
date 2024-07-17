@@ -1,4 +1,4 @@
-module github.com/Fenrir-Technologies/bramble
+module github.com/fenrir-technologies/bramble
 
 go 1.22
 

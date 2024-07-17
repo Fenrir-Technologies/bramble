@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Fenrir-Technologies/bramble"
+	"github.com/fenrir-technologies/bramble"
 	"github.com/rs/cors"
 	"github.com/sirupsen/logrus"
 )

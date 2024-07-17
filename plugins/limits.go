@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Fenrir-Technologies/bramble"
+	"github.com/fenrir-technologies/bramble"
 )
 
 func init() {

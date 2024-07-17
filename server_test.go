@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Fenrir-Technologies/bramble/testsrv"
+	"github.com/fenrir-technologies/bramble/testsrv"
 	"github.com/stretchr/testify/require"
 	"github.com/vektah/gqlparser/v2"
 )

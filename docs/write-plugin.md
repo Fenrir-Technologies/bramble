@@ -2,8 +2,8 @@
 
 ## Plugin interface
 
-Plugins must implement the [`Plugin`](https://pkg.go.dev/github.com/Fenrir-Technologies/bramble/bramble#Plugin) interface. Optionaly they can derive from
-the [`BasePlugin`](https://pkg.go.dev/github.com/Fenrir-Technologies/bramble/bramble#BasePlugin) implementation as to avoid redefining all methods.
+Plugins must implement the [`Plugin`](https://pkg.go.dev/github.com/fenrir-technologies/bramble/bramble#Plugin) interface. Optionaly they can derive from
+the [`BasePlugin`](https://pkg.go.dev/github.com/fenrir-technologies/bramble/bramble#BasePlugin) implementation as to avoid redefining all methods.
 
 ```go
 type MyPlugin struct {
@@ -36,8 +36,8 @@ To build Bramble with custom plugins simply create your own `main.go` with an an
 package main
 
 import (
-	"github.com/Fenrir-Technologies/bramble"
-	_ "github.com/Fenrir-Technologies/bramble/plugins"
+	"github.com/fenrir-technologies/bramble"
+	_ "github.com/fenrir-technologies/bramble/plugins"
 	_ "github.com/your/custom/package"
 )
 

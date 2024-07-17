@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Fenrir-Technologies/bramble"
+	"github.com/fenrir-technologies/bramble"
 	"github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/relay"
 	"github.com/vektah/gqlparser/v2/ast"

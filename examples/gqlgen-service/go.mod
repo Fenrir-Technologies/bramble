@@ -1,4 +1,4 @@
-module github.com/Fenrir-Technologies/bramble/examples/gqlgen-service
+module github.com/fenrir-technologies/bramble/examples/gqlgen-service
 
 go 1.22
 

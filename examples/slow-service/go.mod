@@ -1,4 +1,4 @@
-module github.com/Fenrir-Technologies/bramble/examples/slow-service
+module github.com/fenrir-technologies/bramble/examples/slow-service
 
 go 1.22
 

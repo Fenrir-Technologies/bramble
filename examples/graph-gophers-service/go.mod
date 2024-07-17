@@ -1,4 +1,4 @@
-module github.com/Fenrir-Technologies/bramble/examples/graph-gophers-service
+module github.com/fenrir-technologies/bramble/examples/graph-gophers-service
 
 go 1.22
 
